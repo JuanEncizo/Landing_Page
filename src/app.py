@@ -13,6 +13,24 @@ def index():
 def registro():
     return render_template('/registro.html')
 
+@app.route('/api')
+def api():
+    return render_template('/API.html')
+
+@app.route('/encuesta')
+def encuesta():
+    return render_template('/encuesta.html')
+
+@app.route('/feedback')
+def feedback():
+    return render_template('/feedback.html')
+
+@app.route('/calificame')
+def calificame():
+    return render_template('/calificame.html')
+
+
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="expose")

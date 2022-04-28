@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(to bottom, rgba(69, 106, 122, 1) 0%,rgba(47, 60, 122, 0.66) 100%);
+  }
+
+  .camarita {
+    width: 98px;
+    height: 98px;
+    position: relative;
+    left: 20px;
+    top: 1px;
+  }
+
+  .textoReg{
+    font-family: fantasy;
+    font-size: 250%;
+    color: rgba(255, 244, 244, 1);
+  }

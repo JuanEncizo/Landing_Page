@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} API {% endblock%}
+
+{%block customCSS%}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'css/api.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<div class="text-center">
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1 class="textoReg">Tu Sonrisa te </h1>
+    <h1 class="textoReg">premia</h1>
+</div>
+<br>
+<br>
+<br>
+
+<img class="camarita" src="static/img/Camara.png" />
+<br><br>
+<br>
+<img class="camarita" src="static/img/Camara.png" />
+<br>
+<br>
+
+
+{% endblock%}

@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block body %}
-<div class="conbody">
+<div class="text-center">
     <br>
     <br>
     <br>
@@ -19,21 +19,23 @@
     <h1 class="textoReg">Cuentanos Sobre ti</h1>
     <br>
     <br>
-    <input class="bg-28" type="text" name="Tu nombre" placeholder="      Tu nombre" required="required">
-    <br>
-    <br>
-    <input class="bg-28" type="text" name="" placeholder="      Tu Correo" required="required">
-    <br>
-    <br>
-    <button type="submit" class="bttn">Ingresar</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <form action="/index1" method="POST">
+        <input class="bg-28" type="text" name="Tu nombre" placeholder="      Tu nombre" required="required">
+        <br>
+        <br>
+        <input class="bg-28" type="text" name="Tu Correo" placeholder="      Tu Correo" required="required">
+        <br>
+        <br>
+        <button type="submit" class="bttn">Ingresar</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </form>
 </div>
 
 {% endblock%}
