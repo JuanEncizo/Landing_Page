@@ -1,12 +1,40 @@
 {% extends 'base.html' %}
 
-{% block title %} API {% endblock%}
+{% block title %} Encuesta {% endblock%}
 
 {%block customCSS%}
 <link rel="stylesheet" href="{{ url_for('static', filename= 'css/encuesta.css')}}">
 {% endblock %}
 
 {% block body %}
-
+<div>
+    <br><br><br>
+    <h1 class="textoReg">Un poco mas</h1>
+    <h1 class="textoReg">Sobre ti</h1>
+</div>
+<div class="text-center">
+    <form action="/index1" method="POST">
+        <input class="bg-28" type="text" name="Tu nombre" placeholder="      Tu nombre" required="required">
+        <br>
+        <br>
+        <input class="bg-28" type="text" name="Tu Correo" placeholder="      Tu Correo" required="required">
+        <br>
+        <br>
+        <input class="bg-28" type="text" name="Tu Correo" placeholder="      Tu Correo" required="required">
+        <br>
+        <br>
+        <input class="bg-28" type="text" name="Tu Correo" placeholder="      Tu Correo" required="required">
+        <br>
+        <br>
+        <input class="bg-28" type="text" name="Tu Correo" placeholder="      Tu Correo" required="required">
+        <br>
+        <br>
+        <input class="bg-28" type="text" name="Tu Correo" placeholder="      Tu Correo" required="required">
+        <br>
+        <br>
+        <button type="submit" class="bttn">Ingresar</button>
+    
+    </form>
+</div>
 
 {% endblock%}
