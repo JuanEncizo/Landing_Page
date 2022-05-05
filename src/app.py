@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template , request
 import argparse
 
 from config import config
@@ -9,13 +9,14 @@ app = Flask(__name__)
 def index():
     return render_template('/index.html')
 
-@app.route('/registro')
+@app.route('/registro', methods = ['POST','GET'])
 def registro():
     return render_template('/registro.html')
 
-@app.route('/api')
+@app.route('/api',methods = ['POST','GET'])
 def api():
-    return render_template('/API.html')
+    out= request.form.to_dict()
+    return render_template('/API.html') , out
 
 @app.route('/encuesta')
 def encuesta():
