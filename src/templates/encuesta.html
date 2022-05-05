@@ -7,14 +7,13 @@
 {% endblock %}
 
 {% block body %}
-<br><br><br>
-<div class="contencu">
-    <div class="tituloencuesta">
-        <h1>Un poco mas</h1>
-        <h1>Sobre ti</h1>
+<div class="container">
+    <div >
+        <h1 class="tituloencuesta">Un poco mas<p>Sobre ti</p></h1>
+        
     </div>
 </div>
-<div class="text-center">
+<div class="text-center container">
     <form action="/index1" method="POST">
         <input class="bg-28" type="text" name="Tu nombre" placeholder="      Cuantos años tienes?" required="required">
         <br>
@@ -36,6 +35,9 @@
         <br>
         <br>
         <button type="submit" class="bttn">Ingresar</button>
+        <br>
+        <br>
+        <br>
 
     </form>
 </div>

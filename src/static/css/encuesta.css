@@ -1,6 +1,6 @@
 .bg-28 {
-    width: 260px;
-    height: 43px;
+    width: 234px;
+    height: 39px;
     left: 47px;
     top: 393px;
     border-radius: 24px;
@@ -14,8 +14,8 @@ body {
 }
 
 .bttn {
-    width: 260px;
-    height: 43px;
+    width: 234px;
+    height: 39px;
     left: 47px;
     top: 529px;
     border-radius: 24px;
@@ -26,12 +26,15 @@ body {
 
 
 .tituloencuesta {
-    position: absolute;
+    position: relative;
     font-family: fantasy;
-    font-size: 170%;
-    color: rgba(255, 244, 244, 1);
+    font-size: 150%;
+    color: rgba(255, 255, 255, 1);
 }
 
 .contencu {
-    position: relative;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+
 }
