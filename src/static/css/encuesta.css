@@ -7,13 +7,13 @@
     background: rgba(255, 255, 255, 1);
     border: 1px solid rgba(255, 255, 255, 1);
 
-  }
+}
 
-  body {
-    background: linear-gradient(to bottom, rgba(76, 92, 141, 1) 0%,rgba(255, 255, 255, 0) 100%);
-  }
+body {
+    background: linear-gradient(to bottom, rgba(76, 92, 141, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
 
-  .bttn {
+.bttn {
     width: 260px;
     height: 43px;
     left: 47px;
@@ -21,10 +21,17 @@
     border-radius: 24px;
     background: rgba(167, 79, 255, 1);
     border: 1px solid rgba(167, 79, 255, 1);
-  }
+}
 
-  .textoReg{
+
+
+.tituloencuesta {
+    position: absolute;
     font-family: fantasy;
     font-size: 170%;
     color: rgba(255, 244, 244, 1);
-  }
+}
+
+.contencu {
+    position: relative;
+}
