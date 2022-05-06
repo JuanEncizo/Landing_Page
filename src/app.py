@@ -16,17 +16,18 @@ def registro():
 @app.route('/api',methods = ['POST','GET'])
 def api():
     out= request.form.to_dict()
-    return render_template('/API.html') , out
+    return render_template('/API.html')
 
-@app.route('/encuesta')
+@app.route('/encuesta', methods = ['POST','GET'])
 def encuesta():
     return render_template('/encuesta.html')
 
-@app.route('/feedback')
-def feedback():
-    return render_template('/feedback.html')
+@app.route('/res', methods = ['POST','GET'])
+def res():
+    out1= request.form.to_dict()
+    return render_template('/res.html')
 
-@app.route('/calificame')
+@app.route('/calificame', methods = ['POST','GET'])
 def calificame():
     return render_template('/calificame.html')
 
