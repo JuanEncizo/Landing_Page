@@ -5,11 +5,9 @@ from config import config
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('/index.html')
 
-@app.route('/registro', methods = ['POST','GET'])
+
+@app.route('/', methods = ['POST','GET'])
 def registro():
     return render_template('/registro.html')
 
