@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Recomiendame {% endblock%}
+
+{%block customCSS%}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'css/recomiendame.css')}}">
+{% endblock %}
+
+{% block body %}
+<h1 class="htt">aqui estoy recomiendame</h1>
+
+<div class="posboton">
+    <form action="/calificame" method="POST">
+        <button type="submit" class="bttn">Siguiente</button>
+    </form>
+</div>
+{% endblock%}

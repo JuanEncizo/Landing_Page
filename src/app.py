@@ -25,6 +25,10 @@ def res():
     out1= request.form.to_dict()
     return render_template('/res.html')
 
+@app.route('/recomiendame', methods = ['POST','GET'])
+def recomiendame():
+    return render_template('/recomiendame.html')
+
 @app.route('/calificame', methods = ['POST','GET'])
 def calificame():
     return render_template('/calificame.html')
