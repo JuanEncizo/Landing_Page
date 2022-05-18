@@ -44,15 +44,15 @@ def encuestaproc():
 
     if not request.method == "POST":
         return
-    video = request.files['video']
-    video.save(os.path.join(uploads_dir, secure_filename(video.filename)))
-    print(video)
+    imagen_a_detectar = request.files['imagen_a_detectar']
+    imagen_a_detectar.save(os.path.join(uploads_dir, secure_filename(imagen_a_detectar.filename)))
+    print(imagen_a_detectar)
 
     #subprocess.run(['py', 'detect.py', '--source', os.path.join(uploads_dir,
                   # secure_filename(video.filename)), '--conf', '0.5'], shell=True)
 
     # return os.path.join(uploads_dir, secure_filename(video.filename))
-    obj = secure_filename(video.filename)
+    obj = secure_filename(imagen_a_detectar.filename)
     return obj
     
 

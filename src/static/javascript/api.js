@@ -5,7 +5,7 @@ window.onload = () => {
 
     if (input.files && input.files[0]) {
       let formData = new FormData();
-      formData.append("video", input.files[0]);
+      formData.append("imagen_a_detectar", input.files[0]);
       $.ajax({
         url: "/encuestaproc", // fix this to your liking
         type: "POST",
