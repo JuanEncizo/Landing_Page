@@ -4,6 +4,11 @@
 
 {%block customCSS%}
 <link rel="stylesheet" href="{{ url_for('static', filename= 'css/api.css')}}">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+    </script>
+
+
 {% endblock %}
 
 {% block body %}
@@ -22,13 +27,29 @@
     <h1 class="text-36">Subir Foto</h1>
 </div>
 </div>
-<div class="text-center">
-    <br>
+<br>
+
+<!--<input type="file" id="imagen">-->
+<input
+            id="imageinput"
+            type="file"
+            name="image"
+            onchange="readUrl(this)"
+          />
+
+<div id="imagep">
+    
 </div>
+
+<br>
+
 <div class="text-center">
     <form action="/encuesta" method="POST">
         <button type="submit" class="bttn">Siguiente</button>
     </form>
 </div>
+<button name="send" id="sendbutton">Send</button>
 <br><br><br><br>
+
+<script src="static/javascript/api.js"></script>
 {% endblock%}
