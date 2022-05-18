@@ -2,6 +2,7 @@ from flask import Flask, render_template , request
 import argparse
 import os
 from werkzeug.utils import secure_filename
+from app_detect import*
 
 from config import config
 
@@ -47,6 +48,8 @@ def encuestaproc():
     imagen_a_detectar = request.files['imagen_a_detectar']
     imagen_a_detectar.save(os.path.join(uploads_dir, secure_filename(imagen_a_detectar.filename)))
     print(imagen_a_detectar)
+
+    detec_son(os.path.join(uploads_dir, secure_filename(imagen_a_detectar.filename)))
 
     #subprocess.run(['py', 'detect.py', '--source', os.path.join(uploads_dir,
                   # secure_filename(video.filename)), '--conf', '0.5'], shell=True)
