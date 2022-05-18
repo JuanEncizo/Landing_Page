@@ -4,6 +4,9 @@
 
 {%block customCSS%}
 <link rel="stylesheet" href="{{ url_for('static', filename= 'css/res.css')}}">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+    </script>
 {% endblock %}
 
 {% block body %}
@@ -16,8 +19,9 @@
     <h1>Tu Sonrisa es!!!</h1>
 </div>
 <div>
-    <img class="deteccion" src="static/img/deteccion_test.png" />
+    <img class="deteccion" src="" />
 </div>
+<script>$(".deteccion").attr('src', 'static/img/foto_detectada.jpg');</script>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="posboton">
     <form action="/recomiendame" method="POST">

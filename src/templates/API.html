@@ -28,27 +28,16 @@
 </div>
 </div>
 <br>
-
 <!--<input type="file" id="imagen">-->
-<input
-            id="imageinput"
-            type="file"
-            name="image"
-            onchange="readUrl(this)"
-          />
-
-<div id="imagep">
-    
-</div>
-
+<input id="imageinput" type="file" name="image" onchange="readUrl(this)" />
+<div id="imagep"></div>
+<button name="send" id="sendbutton">Send</button>
 <br>
-
 <div class="text-center">
     <form action="/encuesta" method="POST">
         <button type="submit" class="bttn">Siguiente</button>
     </form>
 </div>
-<button name="send" id="sendbutton">Send</button>
 <br><br><br><br>
 
 <script src="static/javascript/api.js"></script>
