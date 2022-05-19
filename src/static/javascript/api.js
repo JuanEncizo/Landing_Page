@@ -36,7 +36,7 @@ function readUrl(input) {
     if (input.files && input.files[0]) {
       let reader = new FileReader();
       reader.onload = function (e) {
-        $("#imagep").append("<img src='"+reader.result +"'>");
+        //$("#imagep").append("<img src='"+reader.result +"'>");
         console.log(e.target);
   
         

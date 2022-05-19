@@ -51,10 +51,7 @@ def encuestaproc():
     imagen_a_detectar.save(os.path.join(uploads_dir, secure_filename(imagen_a_detectar.filename)))
     print(imagen_a_detectar)
     
-
     detec_son(os.path.join(uploads_dir, secure_filename(imagen_a_detectar.filename)))
-
-
     obj = secure_filename(imagen_a_detectar.filename)
 
     contenido = os.listdir('C:\\Users\\User\\Desktop\\Landing_Page\\runs\\detect\\exp')
@@ -65,11 +62,6 @@ def encuestaproc():
 
     return obj
     
-
-
-
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="expose")
     parser.add_argument("--port", default=5000, type=int, help="port number")
