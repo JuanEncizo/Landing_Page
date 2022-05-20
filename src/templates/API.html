@@ -17,27 +17,21 @@
     <h1 class="textoReg">Tu Sonrisa te </h1>
     <h1 class="textoReg">premia</h1>
 </div>
-<br><br><br>
+<br>
 <div class="alinearH">
-    <img class="camarita" src="static/img/Camara.png" />
-    <h1 class="text-36">Tomar Foto</h1>
+    <div id="div_file">
+        <img class="camarita" src="static/img/galeria.png" />
+        <input id="imageinput" type="file" name="image" onchange="readUrl(this)" />
+    </div>
+    <h1 class="text-36">Tomar Foto</h1> 
 </div>
-<div class="alinearH">
-    <img class="camarita" src="static/img/galeria.png" />
-    <h1 class="text-36">Subir Foto</h1>
+<div id="div_send">
+<button name="send" id="sendbutton"><img src="static/img/process.png" alt="" width="50px" height="50px" border-radius="2px"></button>
 </div>
-</div>
-<!--<input type="file" id="imagen">-->
-<div id="div_file">
-    <p id="textpar">subir Foto</p>
-    <input id="imageinput" type="file" name="image" onchange="readUrl(this)" />
-</div>
-<!--<div id="imagep"></div>-->
-<button name="send" id="sendbutton">Send</button>
 <br>
 <div class="text-center">
     <form action="/encuesta" method="POST">
-        <button type="submit" class="bttn">Siguiente</button>
+        <button type="submit" id="botonSiguienteApi">Siguiente</button>
     </form>
 </div>
 <br><br><br><br>

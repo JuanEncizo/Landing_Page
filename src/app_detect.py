@@ -6,12 +6,11 @@ def detec_son(path_imagen):
     # Image\
     img = path_imagen
     # Inference
-    model.conf = 0.7
-    model.exist_ok = True
+    model.conf = 0.6
     results = model(img)
     # Results, change the flowing to: results.show()
     results.save()
     print(results)  # or .show(), .save(), .crop(), .pandas(), etc
     #results.pandas()
-    print("robert")
+    indicador=1
     return
