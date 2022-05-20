@@ -8,6 +8,7 @@ from shutil import rmtree
 
 from config import config
 
+listaReg_glob = ""
 app = Flask(__name__)
 
 uploads_dir = os.path.join(app.instance_path, 'uploads')
@@ -21,6 +22,10 @@ def registro():
 @app.route('/api',methods = ['POST','GET'])
 def api():
     out= request.form.to_dict()
+    lista = [*out.values()]
+    nombreReg= lista[0]
+    listaReg_glob=nombreReg
+    print(listaReg_glob)
     return render_template('/API.html')
 
 @app.route('/encuesta', methods = ['POST','GET'])
@@ -31,8 +36,10 @@ def encuesta():
 
 @app.route('/res', methods = ['POST','GET'])
 def res():
+    nombre=listaReg_glob
+    print(nombre)
     out1= request.form.to_dict()
-    return render_template('/res.html')
+    return render_template('/res.html', nombre=nombre)
 
 @app.route('/recomiendame', methods = ['POST','GET'])
 def recomiendame():
@@ -54,9 +61,9 @@ def encuestaproc():
     detec_son(os.path.join(uploads_dir, secure_filename(imagen_a_detectar.filename)))
     obj = secure_filename(imagen_a_detectar.filename)
 
-    contenido = os.listdir('C:\\Users\\User\\Desktop\\Landing_Page\\runs\\detect\\exp')
-    shutil.copy("C:\\Users\\User\\Desktop\\Landing_Page\\runs\\detect\\exp\\"+contenido[0], "C:\\Users\\User\\Desktop\\Landing_Page\\src\\static\\img\\foto_detectada.jpg")
-    rmtree("C:\\Users\\User\\Desktop\\Landing_Page\\runs\\detect\\exp")
+    contenido = os.listdir('.\\runs\\detect\\exp')
+    shutil.copy(".\\runs\\detect\\exp\\"+contenido[0], ".\\src\\static\\img\\foto_detectada.jpg")
+    rmtree(".\\runs\\detect\\exp")
     print(obj)
     print(contenido)
 
