@@ -2,7 +2,7 @@ import torch
 import pandas as pd
 
 def detec_son(path_imagen):
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path='.\\src\\pesos\\yolov5s.pt', force_reload=True) 
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path='.\\src\\pesos\\best.pt', force_reload=True) 
     # Image\
     img = path_imagen
     # Inference

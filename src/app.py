@@ -21,11 +21,11 @@ def registro():
 
 @app.route('/api',methods = ['POST','GET'])
 def api():
-    out= request.form.to_dict()
-    lista = [*out.values()]
-    nombreReg= lista[0]
-    listaReg_glob=nombreReg
-    print(listaReg_glob)
+    #out= request.form.to_dict()
+    #lista = [*out.values()]
+   # nombreReg= lista[0]
+   # listaReg_glob=nombreReg
+   # print(listaReg_glob)
     return render_template('/API.html')
 
 @app.route('/encuesta', methods = ['POST','GET'])
@@ -36,10 +36,10 @@ def encuesta():
 
 @app.route('/res', methods = ['POST','GET'])
 def res():
-    nombre=listaReg_glob
-    print(nombre)
-    out1= request.form.to_dict()
-    return render_template('/res.html', nombre=nombre)
+    #nombre=listaReg_glob
+    #print(nombre)
+   # out1= request.form.to_dict()
+    return render_template('/res.html')
 
 @app.route('/recomiendame', methods = ['POST','GET'])
 def recomiendame():
